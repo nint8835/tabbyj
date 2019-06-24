@@ -4,13 +4,13 @@ from typing import Dict, Any, List
 import click
 import ujson as json
 
-def process_value(data: Any, *, location: str=".") -> None:
+def process_value(data: Any, *, location: str="") -> None:
     if isinstance(data, dict):
         process_dict(data, location)
     elif isinstance(data, list):
         process_list(data, location)
     else:
-        print(f"{location} = {data}")
+        print(f"{location} = {repr(data)}")
 
 def process_dict(data: Dict[str, Any], location: str) -> None:
     for key, value in data.items():
