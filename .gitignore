@@ -1,6 +1,7 @@
 # build files
 *.egg-info/
 dist/
+*.pyc
 
 # vscode preferences
 .vscode/
