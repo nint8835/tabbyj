@@ -1,6 +1,8 @@
 # tabbyj
 
-[![Build Status](https://dev.azure.com/rileyflynn/TabbyJ/_apis/build/status/nint8835.tabbyj?branchName=master)](https://dev.azure.com/rileyflynn/TabbyJ/_build/latest?definitionId=1&branchName=master)
+![Azure DevOps builds](https://img.shields.io/azure-devops/build/rileyflynn/e1079463-149d-46ee-9240-6ee3c6e3f14e/1.svg?style=for-the-badge)
+![Azure DevOps tests](https://img.shields.io/azure-devops/tests/rileyflynn/tabbyj/1.svg?style=for-the-badge)
+![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/rileyflynn/TabbyJ/1.svg?style=for-the-badge)
 
 meowj & catj, but in Python.
 
