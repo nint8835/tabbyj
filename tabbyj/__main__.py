@@ -39,7 +39,13 @@ def process_list(data: List[Any], location: str) -> None:
 
 
 @click.command()
-def tabbyj():
-    """Flatten JSON passed in through stdin."""
-    data = json.load(sys.stdin)
+@click.option("--file", default=None, help="File to read from.")
+@click.option("--encoding", default="utf-8", help="Encoding to use to read the provided file.")
+def tabbyj(file, encoding):
+    """Flattens a user-provided JSON object."""
+    if file is not None:
+        with open(file, encoding=encoding) as f:
+            data = json.load(f)
+    else:
+        data = json.load(sys.stdin)
     process_value(data)
