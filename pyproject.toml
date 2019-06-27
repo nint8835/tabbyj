@@ -6,6 +6,7 @@ authors = ["Riley Flynn <riley@rileyflynn.me>"]
 license = "MIT"
 include = ["tabbyj/**/*.py"]
 readme = "README.md"
+homepage = "https://github.com/nint8835/tabbyj"
 
 [tool.poetry.dependencies]
 python = "^3.6"
