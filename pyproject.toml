@@ -5,6 +5,7 @@ description = "A command line JSON flattener"
 authors = ["Riley Flynn <riley@rileyflynn.me>"]
 license = "MIT"
 include = ["tabbyj/**/*.py"]
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.6"
