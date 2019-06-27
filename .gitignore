@@ -5,3 +5,8 @@ dist/
 
 # vscode preferences
 .vscode/
+
+#testing files
+.pytest_cache/
+.coverage
+cov.xml

@@ -45,8 +45,22 @@ def process_list(data: List[Any], location: str) -> None:
 def tabbyj(file, encoding):
     """Flattens a user-provided JSON object."""
     if file is not None:
-        with open(file, encoding=encoding) as f:
-            data = json.load(f)
+        try:
+            with open(file, encoding=encoding) as f:
+                data = json.load(f)
+        except ValueError:
+            click.secho(
+                "Either no JSON was provided, or the JSON provided was malformed.",
+                fg="red",
+            )
+            sys.exit(1)
     else:
-        data = json.load(sys.stdin)
+        try:
+            data = json.load(sys.stdin)
+        except ValueError:
+            click.secho(
+                "Either no JSON was provided, or the JSON provided was malformed.",
+                fg="red",
+            )
+            sys.exit(1)
     process_value(data)
