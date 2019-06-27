@@ -1,5 +1,7 @@
 # tabbyj
 
+[![Build Status](https://dev.azure.com/rileyflynn/TabbyJ/_apis/build/status/nint8835.tabbyj?branchName=master)](https://dev.azure.com/rileyflynn/TabbyJ/_build/latest?definitionId=1&branchName=master)
+
 meowj & catj, but in Python.
 
 ## Installation
