@@ -18,6 +18,7 @@ black = "=19.3b0"
 pylint = "^2.3"
 pytest = "^4.6"
 pytest-cov = "^2.7"
+pytest-azurepipelines = "^0.7.0"
 
 [tool.poetry.scripts]
 tabbyj = "tabbyj.__main__:tabbyj"
