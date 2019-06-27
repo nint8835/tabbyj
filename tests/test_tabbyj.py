@@ -90,3 +90,15 @@ def test_tabbyj_valid_file_input(command_runner, valid_json_file):
 .string = 'String'
 """
     )
+
+
+def test_tabbyj_nonexistent_file(command_runner):
+    result = command_runner(["--file", "nonexistent.json"])
+    assert result.exit_code == 1
+    assert result.output == "The specified file could not be found.\n"
+
+
+def test_tabbyj_invalid_encoding(command_runner, valid_json_file):
+    result = command_runner(["--file", valid_json_file, "--encoding", "fakeencoding"])
+    assert result.exit_code == 1
+    assert result.output == "The specified encoding is invalid.\n"

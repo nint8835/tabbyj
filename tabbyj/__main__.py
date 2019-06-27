@@ -54,6 +54,12 @@ def tabbyj(file, encoding):
                 fg="red",
             )
             sys.exit(1)
+        except FileNotFoundError:
+            click.secho("The specified file could not be found.", fg="red")
+            sys.exit(1)
+        except LookupError:
+            click.secho("The specified encoding is invalid.", fg="red")
+            sys.exit(1)
     else:
         try:
             data = json.load(sys.stdin)
