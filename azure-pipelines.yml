@@ -30,5 +30,5 @@ steps:
   displayName: 'Install Package & Dependencies'
 
 - script: |
-    source ~/.cache/pypoetry/virtualenvs/tabbyj-py$(python.version)/bin/activate && pytest -cov=tabbyj --cov-report xml:cov.xml
+    source ~/.cache/pypoetry/virtualenvs/tabbyj-py$(python.version)/bin/activate && pytest --cov=tabbyj --cov-report html
   displayName: 'Activate Virtualenv & Run Tests'
