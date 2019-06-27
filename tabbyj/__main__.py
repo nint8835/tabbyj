@@ -33,14 +33,15 @@ def process_dict(data: Dict[str, Any], location: str) -> None:
 def process_list(data: List[Any], location: str) -> None:
     for index, value in enumerate(data):
         process_value(
-            value,
-            location=f"{location}[{click.style(str(index), fg='yellow')}]"
+            value, location=f"{location}[{click.style(str(index), fg='yellow')}]"
         )
 
 
 @click.command()
 @click.option("--file", default=None, help="File to read from.")
-@click.option("--encoding", default="utf-8", help="Encoding to use to read the provided file.")
+@click.option(
+    "--encoding", default="utf-8", help="Encoding to use to read the provided file."
+)
 def tabbyj(file, encoding):
     """Flattens a user-provided JSON object."""
     if file is not None:
