@@ -70,3 +70,7 @@ def tabbyj(file, encoding):
             )
             sys.exit(1)
     process_value(data)
+
+
+if __name__ == "__main__":
+    tabbyj()

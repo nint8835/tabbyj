@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tabbyj"
-version = "0.2.2"
+version = "0.3.0"
 description = "A command line JSON flattener"
 authors = ["Riley Flynn <riley@rileyflynn.me>"]
 license = "MIT"
